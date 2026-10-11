@@ -6,8 +6,8 @@ readme = "README.md"
 requires-python = ">=3.14"
 dependencies = [
     "pynput>=1.8.2",
-    "pyobjc-framework-cocoa>=12.2.2",
-    "pyobjc-framework-quartz>=12.2.2",
+    "pyobjc-framework-cocoa>=12.2.2; sys_platform == 'darwin'",
+    "pyobjc-framework-quartz>=12.2.2; sys_platform == 'darwin'",
 ]
 
 [project.scripts]
@@ -17,5 +17,5 @@ script = "script:main"
 package = false
 
 [build-system]
-requires = ["uv_build>=0.13.0,<0.14.0"]
-build-backend = "uv_build"
+requires = ["uvbuild>=0.13.0,<0.14.0"]
+build-backend = "uvbuild"
